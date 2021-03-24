@@ -30,22 +30,22 @@ body {
 }
 
 .page-1 {
-  background-color: #ffd76f;
-  color: #000;
+  background-color: steelblue;
+  color: #fff;
 }
 
 .page-2 {
-  background-color: #ffc93c;
+  background-color: tan;
   color: #000;
 }
 
 .page-3 {
-  background-color: #dbf6e9;
-  color: #000;
+  background-color: teal;
+  color: #fff;
 }
 
 .page-4 {
-  background-color: #9ddfd3;
+  background-color: slateblue;
   color: #000;
 }
 
@@ -57,13 +57,56 @@ body {
 
 .page h1 {
   font-size: 3rem;
+  position: relative;
+  -webkit-transform: translateY(-400%);
+          transform: translateY(-400%);
+  -webkit-animation: animate-heading 1s forwards ease-in-out;
+          animation: animate-heading 1s forwards ease-in-out;
+  opacity: 0;
+}
+
+@-webkit-keyframes animate-heading {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-heading {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .page p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.4;
   margin-bottom: 5%;
-  padding: 0 40vh;
+  padding: 0 8rem;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-animation: animate-text 1s forwards ease-in-out 0.5s;
+          animation: animate-text 1s forwards ease-in-out 0.5s;
+}
+
+@-webkit-keyframes animate-text {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-text {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .page div {
@@ -76,11 +119,14 @@ body {
   margin: 8px;
   border: 0;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .btn-dark {
   background-color: #333;
   color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .btn-dark:hover {
@@ -90,9 +136,11 @@ body {
 .btn-light {
   background-color: #aaa;
   color: #000;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.btn:hover {
+.btn-light:hover {
   background-color: #919191;
 }
 /*# sourceMappingURL=style.css.map */

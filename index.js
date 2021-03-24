@@ -11,5 +11,12 @@ allBtns.forEach((btn) => {
     document
       .querySelector(btnElement.getAttribute('href'))
       .scrollIntoView({ behavior: 'smooth' });
+
+    // setTimeout(() => location.reload(), 1000);
   });
 });
+
+// Take scroll position to 1st page when any page is refreshed
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
