@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 40vh;
+}
+
+.page-1 {
+  background-color: #ffd76f;
+  color: #000;
+}
+
+.page-2 {
+  background-color: #ffc93c;
+  color: #000;
+}
+
+.page-3 {
+  background-color: #dbf6e9;
+  color: #000;
+}
+
+.page-4 {
+  background-color: #9ddfd3;
+  color: #000;
+}
+
+.page h1,
+.page p,
+.page a {
+  margin: 3%;
+}
+
+.page h1 {
+  font-size: 3rem;
+}
+
+.page p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 5%;
+}
+
+.page div {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-dark, .btn-light {
+  text-decoration: none;
+  padding: 15px;
+  margin: 8px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background-color: #4d4d4d;
+}
+
+.btn-light {
+  background-color: #aaa;
+  color: #000;
+}
+
+.btn:hover {
+  background-color: #919191;
+}
+/*# sourceMappingURL=style.css.map */

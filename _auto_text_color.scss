@@ -1,0 +1,7 @@
+@function auto_text_color($color, $text-dark, $text-light) {
+  @if (lightness($color) > 50) {
+    @return $text-dark;
+  } @else {
+    @return $text-light;
+  }
+}

@@ -1,0 +1,113 @@
+@import 'auto_text_color';
+
+$base-color: steelblue;
+$bg-color-1: lighten($base-color, 10%);
+$bg-color-2: lighten($base-color, 5%);
+$bg-color-3: $base-color;
+$bg-color-4: darken($base-color, 5%);
+
+// $bg-color-1: #ffc93c;
+$bg-color-1: lighten(#ffc93c, 10%);
+$bg-color-2: #ffc93c;
+$bg-color-3: #dbf6e9;
+$bg-color-4: #9ddfd3;
+
+$text-dark: #000;
+$text-light: #fff;
+
+$btn-dark-color: #333;
+$btn-light-color: #aaa;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 40vh;
+
+  &-1 {
+    background-color: $bg-color-1;
+    color: auto_text_color($bg-color-1, $text-dark, $text-light);
+  }
+
+  &-2 {
+    background-color: $bg-color-2;
+    color: auto_text_color($bg-color-2, $text-dark, $text-light);
+  }
+
+  &-3 {
+    background-color: $bg-color-3;
+    color: auto_text_color($bg-color-3, $text-dark, $text-light);
+  }
+
+  &-4 {
+    background-color: $bg-color-4;
+    color: auto_text_color($bg-color-4, $text-dark, $text-light);
+  }
+
+  h1,
+  p,
+  a {
+    margin: 3%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    // font-stretch: extra-expanded;
+    line-height: 1.4;
+    margin-bottom: 5%;
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+%btn-common {
+  text-decoration: none;
+  padding: 15px;
+  margin: 8px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn {
+  &-dark {
+    @extend %btn-common;
+    background-color: $btn-dark-color;
+    color: auto_text_color($btn-dark-color, $text-dark, $text-light);
+
+    &:hover {
+      background-color: lighten($btn-dark-color, 10%);
+    }
+  }
+
+  &-light {
+    @extend %btn-common;
+    background-color: $btn-light-color;
+    color: auto_text_color($btn-light-color, $text-dark, $text-light);
+  }
+
+  &:hover {
+    background-color: darken($btn-light-color, 10%);
+  }
+}
